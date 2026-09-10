@@ -1,7 +1,7 @@
 {
   "id": "grokbot-soul",
-  "name": "SkillStack (PromptStack attachment)",
-  "description": "PUBLIC skills pack plus a generic PromptStack contract (operator gates, not a named agent).",
+  "name": "Grokbot Soul Kernel",
+  "description": "Soul roster plus PUBLIC Board/ops canon.",
   "security_level": "PUBLIC",
   "leak_class": "formation_leftover",
   "kernel_fit": "soul_safe",
@@ -10,32 +10,6 @@
     "allowed_leak_classes": ["formation_leftover", "policy_default"],
     "allowed_kernel_fits": ["soul_safe"]
   },
-  "explicit_includes": [
-    {"slug": "README", "entity_type": "Skill"},
-    {"slug": "board/README", "entity_type": "Skill"},
-    {"slug": "core-operations/README", "entity_type": "Skill"},
-    {"slug": "core-operations/writing/README", "entity_type": "Skill"},
-    {"slug": "core-operations/management/README", "entity_type": "Skill"},
-    {"slug": "project-classes/README", "entity_type": "Skill"},
-    {"slug": "project-classes/startup-growth/README", "entity_type": "Skill"},
-    {"slug": "skill-flows/README", "entity_type": "Skill"},
-    {"slug": "skillstack/README", "entity_type": "Skill"},
-    {"slug": "verify/README", "entity_type": "Skill"},
-    {"slug": "core-operations/stratification-protocol", "entity_type": "Skill"},
-    {"slug": "core-operations/mode-selection", "entity_type": "Skill"},
-    {"slug": "core-operations/state-management", "entity_type": "Skill"},
-    {"slug": "skill-flows/recursive-decomposition", "entity_type": "Skill"},
-    {"slug": "skill-flows/manifest-generation", "entity_type": "Skill"},
-    {"slug": "verify/core/complexity-audit", "entity_type": "Skill"},
-    {"slug": "verify/core/dependency-enforcement", "entity_type": "Skill"},
-    {"slug": "verify/core/depth-check", "entity_type": "Skill"},
-    {"slug": "verify/core/path-audit", "entity_type": "Skill"},
-    {"slug": "verify/core/spec-linting-before-code", "entity_type": "Skill"},
-    {"slug": "verify/core/statelessness-audit", "entity_type": "Skill"},
-    {"slug": "board/governance/alignment-verification", "entity_type": "Skill"},
-    {"slug": "board/governance/necessity-audit", "entity_type": "Skill"},
-    {"slug": "verify/governance/benny-review", "entity_type": "Skill"},
-    {"slug": "verify/governance/final-review", "entity_type": "Skill"}
-  ],
+  "explicit_includes": [],
   "explicit_excludes": []
 }

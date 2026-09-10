@@ -175,7 +175,7 @@ Reusable logic belongs here, not in operator-local `specs/prompts/<slug>/` voice
 
 ## 8. Source and Governance Notes
 
-**Source**: `prompts/AIfirst-articles.png` (not in this snapshot; do not fetch it unless the operator authorizes).  
+**Source**: [`prompts/AIfirst-articles.png`](../../../../prompts/AIfirst-articles.png)  
 **Source title**: *The AI-Citable Content Recipe*  
 **Source publisher**: LinkedIn for Marketing  
 **Source framing**: “The top LinkedIn articles share a practical structure AI loves.”

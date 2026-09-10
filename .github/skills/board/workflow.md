@@ -1,17 +1,9 @@
 
 # Implementation: Stratification Review Workflow
 
-## Fast path (MUST)
-
-Routine local edits (one file, no new skill, no DNA change) MUST use this path and MUST NOT run the three-stage sequence:
-
-1. Edit the file.
-2. Write a one-line verdict.
-3. Stop.
-
 ## Overview
 
-The Stratification Review is the governance loop for architecture and new-skill proposals. Fast path (above) has equal force and MUST win for routine edits. Members are manifests, not runtime agents. Each stage MUST write a named artifact (`strategy-record`, `pivot-record`, or `veto-record`). Roleplay without an artifact does not count.
+The Stratification Review is the mandatory governance loop for all Skill-Generator proposals. Every proposal must pass through the three board members in a specific sequence to ensure strategic alignment, efficient implementation, and minimal complexity.
 
 ## The Review Sequence
 
@@ -45,8 +37,8 @@ When a change to a Board Persona or the Governance Workflow itself is proposed, 
 
 ### 3. Traceability
 
-- [ ] **Log Entry**: Write a dated amendment record in the working tree. MUST NOT invent a log file that is not in this snapshot.
-- [ ] **Task Link**: Name the operator task or issue. MUST NOT invent a `plan.md` that is not in this snapshot.
+- [ ] **Log Entry**: Record the amendment in `governance_log.md`.
+- [ ] **Task Link**: Link the amendment to its corresponding task in `plan.md`.
 
 ## Workflow Logic (Pseudocode)
 
@@ -64,7 +56,6 @@ graph TD
 
 ## Governance Rules
 
-- **Fast path supremacy**: Routine local edits MUST skip this sequence.
-- **Mandatory Sequence**: An architecture proposal cannot skip a stage.
-- **Veto Supremacy**: A Skeptic veto-record is final for the current version of the proposal.
-- **Documentation**: Each review MUST be a named artifact in the working tree, not a persona monologue.
+- **Mandatory Sequence**: A proposal cannot skip a stage.
+- **Veto Supremacy**: A Skeptic's Veto is final for the current version of the proposal.
+- **Documentation**: Each review must be documented in the project's `governance_log.md` or similar audit trail.

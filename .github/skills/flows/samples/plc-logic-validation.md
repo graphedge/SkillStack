@@ -1,8 +1,6 @@
 
 # Skill Flow: PLC Logic Validation (Manufacturing)
 
-**NON-CANON.** Sample flow. MUST NOT override Board, writing canon, or the snapshot root README.
-
 ## 1. Skill Signature
 
 Validates PLC (Programmable Logic Controller) logic outputs against safety and operational specifications.
