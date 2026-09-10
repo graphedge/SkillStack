@@ -1,6 +1,8 @@
 
 # Skill Flow: CLI Alias Configuration (Developer Tools)
 
+**NON-CANON.** Sample flow. MUST NOT override Board, writing canon, or the snapshot root README.
+
 ## 1. Skill Signature
 
 Configures project-specific CLI aliases and environment variables to streamline developer workflows.

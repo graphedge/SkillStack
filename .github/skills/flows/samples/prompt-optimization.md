@@ -1,6 +1,8 @@
 
 # Skill Flow: Prompt Template Optimization (AI Engineering)
 
+**NON-CANON.** Sample flow. MUST NOT override Board, writing canon, or the snapshot root README.
+
 ## 1. Skill Signature
 
 Optimizes LLM prompt templates for token efficiency and response accuracy using a recursive feedback loop.
