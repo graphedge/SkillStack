@@ -9,7 +9,7 @@ This is a filtered SkillStack Kernel snapshot. Clone this tree; do not fetch oth
 **Lineage:**
 - Canonical public repo: https://github.com/graphedge/SkillStack
 - This tree is the allowed PromptStack corpus when cloned from that repo.
-- Private operator source is not published here; do not fetch it unless the operator authorizes.
+- Private operator source (SkillStack2) is not published here; do not fetch it unless the operator authorizes.
 - Kernel operator id: grokbot-soul (filter id only; not a second public taxonomy).
 
 **Outside-repo rule:** Never pull information from repositories outside this snapshot unless you have asked the operator and they have authorized it.
@@ -18,8 +18,11 @@ This is a filtered SkillStack Kernel snapshot. Clone this tree; do not fetch oth
 1. Operator authorization (including the outside-repo rule)
 2. Files that exist in this snapshot
 3. Fast path for routine local edits
-4. Board workflow for architecture
-5. Customer fill-ins, flows/samples/, and sumplan/ are examples only (not law)
+4. Change proposal for bounded suggestions (suggest-only; at most five files)
+5. Board workflow and stratification protocol for architecture
+6. Customer fill-ins, flows/samples/, and sumplan/ are examples only (not law)
+
+**Lane lock (MUST):** Unnamed lanes (debug, escalate-difficulty, or any procedure not defined as a heading in board/workflow.md) are not in this snapshot. Stop; do not invent or run them as lanes.
 
 **Missing-hop gate (MUST):** A name in an index is not a file. If the path is absent, stop. Do not invent the missing skill. Do not fetch another repository. Ask the operator.
 
@@ -28,10 +31,9 @@ This is a filtered SkillStack Kernel snapshot. Clone this tree; do not fetch oth
 **Fast path (MUST):** For a local tweak (one file, no new skill, no DNA change): edit the file and state a one-line verdict. MUST NOT run the Board sequence or the full proposal template.
 
 - Kernel ID: grokbot-soul
-- Kernel name: Grokbot Soul Kernel
 - Minimum security level: PUBLIC
-- Included entities: 17
-- Excluded entities: 86
+- Included entities: 40
+- Excluded entities: 75
 
 Membership was derived from the entity registry and Kernel filter rules.
 Section-level security overrides were applied to Markdown files.

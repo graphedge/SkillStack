@@ -3,17 +3,38 @@
 
 ## Fast path (MUST)
 
-Routine local edits (one file, no new skill, no DNA change) MUST use this path and MUST NOT run the three-stage sequence:
+Routine local edits (one file, no new skill, no DNA change) MUST use this path and MUST NOT run the Review sequence:
 
 1. Edit the file.
 2. Write a one-line verdict.
 3. Stop.
 
+**Routing:** When the operator said do/fix/apply (not suggest/propose), Fast path MUST win unless DNA / new skill / new folder applies.
+
+## Change proposal (MUST)
+
+When the operator asks to **suggest** or **propose** changes (not apply), and the target is at most five files that exist in the snapshot or on disk in the attached workspace, with no new skill, no DNA adoption, and no new folder:
+
+1. Quote existing file paths.
+2. List concrete edits as a **suggested patch** (do not apply).
+3. Apply Skeptic lenses as bullets only: Necessity, Placement, Depth.
+4. Stop.
+
+**Suggest-only:** MUST NOT apply edits to any file. MUST NOT write `strategy-record`, `pivot-record`, or `veto-record`. MUST NOT run the Review sequence.
+
+DNA suggestions (including this file) are allowed as patches only; **applying** DNA requires Review sequence (`-mod`).
+
+If a quoted path is not in the snapshot and not on disk in the workspace: stop (missing-hop). Do not invent the file or hop.
+
+More than five files: use Review sequence.
+
 ## Overview
 
-The Stratification Review is the governance loop for architecture and new-skill proposals. Fast path (above) has equal force and MUST win for routine edits. Members are manifests, not runtime agents. Each stage MUST write a named artifact (`strategy-record`, `pivot-record`, or `veto-record`). Roleplay without an artifact does not count.
+Three **lanes** exist: Fast path, Change proposal, and Review sequence. **Lane lock** (below) is a rule heading, not a fourth lane.
 
-## The Review Sequence
+The Stratification Review is the governance loop for architecture and new-skill proposals. Fast path has equal force and MUST win for routine do/fix/apply edits. Change proposal covers bounded suggestions. Review sequence is the adopt path. Members are manifests, not runtime agents. Each Review sequence stage MUST write a named artifact (`strategy-record`, `pivot-record`, or `veto-record`). Roleplay without an artifact does not count.
+
+## Review sequence (MUST)
 
 1. **Stage 1: Strategy Lead (Alignment)**
    - **Goal**: Ensure the proposal aligns with the North Star.
@@ -27,6 +48,16 @@ The Stratification Review is the governance loop for architecture and new-skill 
    - **Goal**: Prevent bloat and unnecessary architectural depth.
    - **Status**: The Skeptic applies the "Three Lenses" (Necessity, Placement, Depth).
    - **The Veto**: If the Skeptic issues a **VETO**, the proposal is sent back to the beginning for refactoring or total rejection.
+
+## Lane lock (MUST)
+
+Only **Fast path**, **Change proposal**, and **Review sequence** are lanes. This heading is a closed-lane rule, not a lane.
+
+Debug loops, escalate-difficulty procedures, and any other unnamed procedure MUST NOT run as a lane. Same force as missing-hop: stop; do not invent.
+
+To **suggest** a new lane: Change proposal targeting `workflow.md` (suggest-only). To **adopt** a new lane: Review sequence (`-mod`).
+
+A name that is not a lane-defining heading in this file is not a lane.
 
 ## Amendment Protocol (Board Governance)
 
@@ -52,7 +83,13 @@ When a change to a Board Persona or the Governance Workflow itself is proposed, 
 
 ```mermaid
 graph TD
-    Start[New Skill Proposal] --> Strategy{Strategy Lead Review}
+    Ask[Operator ask] --> Route{Lane choice}
+    Route -->|do/fix/apply one file| Fast[Fast path]
+    Route -->|suggest/propose ≤5 files| Change[Change proposal]
+    Route -->|DNA adopt / new skill / folder| Review[Review sequence]
+    Fast --> FastEnd[Edit + one-line verdict + stop]
+    Change --> ChangeEnd[Quote paths + patch + Skeptic bullets + stop]
+    Review --> Strategy{Strategy Lead Review}
     Strategy -- Reject --> End[Proposal Terminated]
     Strategy -- Approve --> Pivot{Pivot Lead Review}
     Pivot -- Suggest Pivot --> Refactor[Refactor via Pivot Path]
@@ -64,7 +101,10 @@ graph TD
 
 ## Governance Rules
 
-- **Fast path supremacy**: Routine local edits MUST skip this sequence.
-- **Mandatory Sequence**: An architecture proposal cannot skip a stage.
+- **Fast path supremacy**: Routine local edits (do/fix/apply) MUST skip the Review sequence.
+- **Change proposal routing**: suggest/propose → Change proposal (suggest-only, ≤5 files).
+- **Routing tie-break**: suggest/propose → Change proposal; do/fix/apply → Fast path; DNA / new skill / new folder → Review sequence regardless of wording.
+- **Mandatory Sequence**: An architecture proposal cannot skip a Review sequence stage.
 - **Veto Supremacy**: A Skeptic veto-record is final for the current version of the proposal.
-- **Documentation**: Each review MUST be a named artifact in the working tree, not a persona monologue.
+- **Documentation**: Each Review sequence stage MUST be a named artifact in the working tree, not a persona monologue.
+- **Lane lock**: Unnamed lanes are not in this snapshot. Stop or suggest via Change proposal to `workflow.md`.

@@ -9,7 +9,9 @@ disable-model-invocation: true
 
 # Sumplan — Summary-Proof Handoff
 
-**Invoke:** `/sumplan [topic]` · `-ex @sumplan [topic]`
+**NON-CANON.** Example handoff skill. MUST NOT override Board, writing canon, or the snapshot root README.
+
+**Invoke (example only — NON-CANON, not snapshot law):** `/sumplan [topic]` · `-ex @sumplan [topic]`
 
 Derived from SkillStack `summary-proof-handoff` (Certified 2026-08-01). Target-repo alias; not SkillStack canon.
 
@@ -46,7 +48,7 @@ Use **one primary handoff** per thread; link prior handoffs instead of duplicati
    - What passed / failed / partial (with numbers)
    - Spec locks and explicit deferrals
    - Single ordered next-action list (task IDs when applicable)
-3. **Write** using [reference.md](reference.md) Feature Handoff template — fill every REQUIRED section; omit optional sections only when empty.
+3. **Write** using the Feature Handoff headings in this file — fill every REQUIRED section; omit optional sections only when empty. `reference.md` is not in this snapshot.
 4. **Cross-link** spec, plan, tasks, prior handoffs, research appendices. Handoff = **index + recovery**, not a second spec.
 5. **Platform note** when it blocks work: record the host/OS/shell gotcha that actually blocks the next step.
 6. **Verify** with Session recovery checklist at bottom of template before finishing.
@@ -73,4 +75,4 @@ Use **one primary handoff** per thread; link prior handoffs instead of duplicati
 
 ## Examples
 
-See existing handoffs under `specs/<feature-id>/prompts/`. Template: [reference.md](reference.md).
+See existing handoffs under `specs/<feature-id>/prompts/` when that tree exists. Template `reference.md` is not in this snapshot.
